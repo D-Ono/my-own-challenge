@@ -1,24 +1,76 @@
 :root{
     --backgroundColor: #424242;
-    --backgroundTopBar: #212121;
+    --black: #212121;
     --textColor: #FF6600;
 }
 
 *{
     padding: 0;
     margin: 0;
-    width: 100vw;
-    height: 100vh;
+    box-sizing: border-box;
+    font-family: "Roboto";
 }
 
 main{
-    width: 100%;
-    height: 90%;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
     background-color: var(--backgroundColor);
 }
 
 header{
-    width: 100%;
-    height: 10%;
-    background-color: var(--backgroundTopBar);
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--black);
+}
+
+h1{
+    color: var(--textColor);
+}
+
+.container{
+    width: 50%;
+    height: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h3{
+    font-weight: 300;
+    color: var(--textColor);
+}
+
+.buttons-box{
+    width: 85%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.circle{
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #9e5220 0%, #424242 98.04%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    background-color: var(--black);
+    color: var(--textColor);
+    font-weight: 400;
 }
