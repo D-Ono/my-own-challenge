@@ -1,6 +1,6 @@
 const timer = document.getElementById('stopwatch');
-const start = document.getElementById('start-stopwatch');
-const restart = document.getElementById('restart-stopwatch');
+const startStop = document.getElementById('start-stopwatch');
+const restartStop = document.getElementById('restart-stopwatch');
 
 let min = 0;
 let sec = 0;
@@ -8,7 +8,7 @@ let stoptime = true;
 
 function startTimer() {
   if (stoptime == true) {
-        start.innerHTML = "Pause";
+        startStop.innerHTML = "Pause";
         stoptime = false;
         timerCycle();
     }
@@ -17,7 +17,7 @@ function startTimer() {
 function stopTimer() {
   if (stoptime == false) {
     stoptime = true;
-    start.innerHTML = "Start";
+    startStop.innerHTML = "Start";
   }
 }
 
@@ -53,16 +53,16 @@ function timerCycle() {
 function resetTimer() {
     timer.innerHTML = `<h1>00:00</h1>`;
     stoptime = true;
-    start.innerHTML = "Start";
+    startStop.innerHTML = "Start";
     sec = 0;
     min = 0;
 }
 
-start.addEventListener('click', ()=>{
+startStop.addEventListener('click', ()=>{
     if(stoptime == true)
         startTimer();
     else
         stopTimer();
 });
 
-restart.addEventListener('click', resetTimer);
+restartStop.addEventListener('click', resetTimer);
