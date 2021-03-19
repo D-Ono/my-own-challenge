@@ -16,9 +16,9 @@ Below are listed all the challenges created.
 ### Challenge 01 
 In this Challenge, create a stopwatch and a alarm. 
 
-![Challenge One](https://raw.githubusercontent.com/D-Ono/my-own-challenge/main/assets/%23Challenge01.png?token=ANJDIL47QKDJFVKTWT6DISDAKUVYE)
+![Challenge One](https://github.com/D-Ono/my-own-challenge/blob/main/assets/%23Challenge01.png)
 
 ### Challenge 02
 Create a Game! The Famous Tic Tac Toe!
 
-![Challenge Two](https://raw.githubusercontent.com/D-Ono/my-own-challenge/main/assets/%23Challenge02.png?token=ANJDILZKE52MFOJKFTZ6ZPDAKUXVE)
+![Challenge Two](https://github.com/D-Ono/my-own-challenge/blob/main/assets/%23Challenge02.png)
