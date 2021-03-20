@@ -66,3 +66,5 @@ startStop.addEventListener('click', ()=>{
 });
 
 restartStop.addEventListener('click', resetTimer);
+
+

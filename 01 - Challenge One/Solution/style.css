@@ -25,13 +25,29 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: var(--black);
 }
 
 h1{
     color: var(--textColor);
 }
+
+input {
+    background: transparent;
+    font: 32px "Roboto";
+    font-weight: bold;
+    text-align: center;
+    color: var(--textColor);
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+input:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
 
 .container{
     width: 50%;
