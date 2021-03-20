@@ -90,3 +90,13 @@ button{
     color: var(--textColor);
     font-weight: 400;
 }
+
+@media only screen and (max-width: 600px) {
+    main{
+        height: 130vh;
+        flex-direction: column;
+    }
+    .container{
+        width: 100%;
+    }
+  }
