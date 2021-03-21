@@ -28,7 +28,7 @@ header{
     background-color: var(--black);
 }
 
-h1{
+h1, h2{
     color: var(--textColor);
 }
 

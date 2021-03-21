@@ -2,8 +2,9 @@ const timer = document.getElementById('stopwatch');
 const startStop = document.getElementById('start-stopwatch');
 const restartStop = document.getElementById('restart-stopwatch');
 
-let min = 0;
-let sec = 0;
+let minutes = 0;
+let seconds = 0;
+let milliseconds = 0;
 let stoptime = true;
 
 function startTimer() {
@@ -23,39 +24,49 @@ function stopTimer() {
 
 function timerCycle() {
     if (stoptime == false) {
-    sec = parseInt(sec);
-    min = parseInt(min);
+    seconds = parseInt(seconds);
+    minutes = parseInt(minutes);
+    milliseconds = parseInt(milliseconds);
 
-    sec = sec + 1;
+    milliseconds = milliseconds + 1;
 
-    if (sec == 60) {
-      min = min + 1;
-      sec = 0;
-    }
-    if (min == 60) {
-      min = 0;
-      sec = 0;
+    if(milliseconds == 100){
+      seconds = seconds + 1;
+      milliseconds = 0;
     }
 
-    if (sec < 10 || sec == 0) {
-      sec = '0' + sec;
+    if (seconds == 60) {
+      minutes = minutes + 1;
+      seconds = 0;
     }
-    if (min < 10 || min == 0) {
-      min = '0' + min;
+    if (minutes == 60) {
+      minutes = 0;
+      seconds = 0;
     }
 
-    timer.innerHTML = `<h1> ${min}:${sec}</h1>`;
+    if(milliseconds < 10){
+      milliseconds = '0' + milliseconds;
+    }
 
-    setTimeout("timerCycle()", 1000);
+    if (seconds < 10) {
+      seconds = '0' + seconds;
+    }
+    if (minutes < 10) {
+      minutes = '0' + minutes;
+    }
+
+    timer.innerHTML = `<h1> ${minutes}:${seconds}</h1><h2>:${milliseconds}</h2>`;
+
+    setTimeout("timerCycle()", 10);
   }
 }
 
 function resetTimer() {
-    timer.innerHTML = `<h1>00:00</h1>`;
+    timer.innerHTML = `<h1>00:00</h1><h2>:00</h2>`;
     stoptime = true;
     startStop.innerHTML = "Start";
-    sec = 0;
-    min = 0;
+    seconds = 0;
+    minutes = 0;
 }
 
 startStop.addEventListener('click', ()=>{
